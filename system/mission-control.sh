@@ -23,7 +23,7 @@ defaults write com.apple.spaces spans-displays -bool false
 # set custom number of columns
 defaults write com.apple.dock springboard-columns -int 6
 # set custom number of rows
-defaults write com.apple.dock springboard-rows -int 3
+defaults write com.apple.dock springboard-rows -int 4
 
 # Reset Launchpad
 defaults write com.apple.dock ResetLaunchPad -bool true

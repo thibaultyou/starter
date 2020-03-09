@@ -33,9 +33,6 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Disable animated focus ring
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 
-# Disable animation when opening the Info window in Finder
-defaults write com.apple.finder DisableAllAnimations -bool true
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true

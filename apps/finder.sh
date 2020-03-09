@@ -4,9 +4,6 @@
 # Finder
 ###############################################################################
 
-# Create user `Sites` directory
-mkdir -p "$HOME/Sites"
-
 # Show user `Library` folder
 chflags nohidden "${HOME}/Library"
 
@@ -15,9 +12,6 @@ mkdir -p "$HOME/bin"
 
 # Hide user `bin` folder
 chflags -h hidden "${HOME}/bin"
-
-# Quitting via ⌘ + Q; doing so will also hide desktop icons
-#defaults write com.apple.finder QuitMenuItem -bool true
 
 # Window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -29,7 +23,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop     -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop     -bool false
 
 # Visibility of hidden files
-#defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -58,7 +52,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Arrange by
 # Kind, Name, Application, Date Last Opened,
 # Date Added, Date Modified, Date Created, Size, Tags, None
-defaults write com.apple.finder FXPreferredGroupBy -string "Kind"
+defaults write com.apple.finder FXPreferredGroupBy -string "Name"
 
 # Spring loaded directories
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
@@ -104,11 +98,8 @@ done
 # Icon View   : `icnv`
 # List View   : `Nlsv`
 # Column View : `clmv`
-# Cover Flow  : `Flwv`
-# After configuring preferred view style, clear all `.DS_Store` files
-# to ensure settings are applied for every directory
-# sudo find / -name ".DS_Store" --delete
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+sudo find / -name ".DS_Store" --delete
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -142,7 +133,6 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # All My Files : `PfAF`
 # Other…       : `PfLo`
 defaults write com.apple.finder NewWindowTarget -string 'PfHm'
-#defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Warning before emptying Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false

@@ -6,6 +6,10 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+## .gitignore
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+
 # Set global variables
 PREF_FILES=()
 AFFECTED_APPS=()
@@ -81,7 +85,6 @@ system_preferences=(
   displays
   dock
   energy-saver
-  finder
   general
   keyboard
   language-region
@@ -111,8 +114,8 @@ for pane in "cfprefsd" "SystemUIServer" "Finder" "Dock" "SpeechSynthesisServer";
 done
 
 # Apps preferences
-## TODO complete
-
+set_prefs app-store "App Store"
+set_prefs finder "Finder"
 
 # Run
 get_open_affected_apps
