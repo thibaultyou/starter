@@ -4,6 +4,8 @@
 # Node
 ###############################################################################
 
+echo "Installing Node packages ..."
+
 # Node and yarn *should* be installed at this point
 hash node 2>/dev/null || echo "Please install node before continuing"
 hash npm 2>/dev/null || echo "Please install npm before continuing"

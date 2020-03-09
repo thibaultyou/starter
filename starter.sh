@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Applying system settings ..."
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -99,7 +101,6 @@ system_preferences=(
   siri
   sound
   spotlight
-  ssd
   time-machine
   trackpad
   users-groups

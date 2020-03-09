@@ -4,6 +4,8 @@
 # Accessibility
 ###############################################################################
 
+echo "Updating accessibility settings ..."
+
 # Enable access for assistive devices
 echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled &>/dev/null
 sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled

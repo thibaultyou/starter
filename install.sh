@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Installing Apps ..."
+
 # Ask for the administrator password upfront
 sudo -v
 

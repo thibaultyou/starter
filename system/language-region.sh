@@ -4,6 +4,8 @@
 # Language & Region
 ###############################################################################
 
+echo "Updating language and region settings ..."
+
 # Prefered languages (in order of preference)
 defaults write NSGlobalDomain AppleLanguages -array "en"
 

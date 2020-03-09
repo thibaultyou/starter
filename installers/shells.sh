@@ -4,6 +4,8 @@
 # Shells
 ###############################################################################
 
+echo "Shell settings ..."
+
 # Add shells installed by Homebrew
 sudo bash -c "which fish bash >> /etc/shells"
 

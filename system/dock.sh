@@ -4,6 +4,8 @@
 # Dock
 ###############################################################################
 
+echo "Updating Dock settings ..."
+
 # Icon size of Dock items
 defaults write com.apple.dock tilesize -int 38
 
@@ -12,6 +14,9 @@ defaults write com.apple.dock size-immutable -bool true
 
 # No icons bouncing
 defaults write com.apple.dock no-bouncing -bool true
+
+# Remove all (default) app icons from the Dock
+defaults write com.apple.dock persistent-apps -array
 
 # Dock magnification
 defaults write com.apple.dock magnification -bool true

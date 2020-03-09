@@ -4,6 +4,8 @@
 # Users & Groups
 ###############################################################################
 
+echo "Updating users and groups settings ..."
+
 # Display login window as: Name and password
 sudo defaults write /Library/Preferences/com.apple.loginwindow "SHOWFULLNAME" -bool true
 

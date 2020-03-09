@@ -4,6 +4,8 @@
 # Python
 ###############################################################################
 
+echo "Installing Python packages ..."
+
 # pyenv *should* be installed at this point
 hash pyenv 2>/dev/null || echo "Please install pyenv before continuing"
 

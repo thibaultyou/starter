@@ -4,6 +4,8 @@
 # Xcode
 ###############################################################################
 
+echo "Installing Xcode ..."
+
 # Install Xcode Command Line Tools
 if ! $(xcode-select -p &>/dev/null); then
   xcode-select --install &>/dev/null

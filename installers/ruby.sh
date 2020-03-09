@@ -4,6 +4,8 @@
 # Ruby
 ###############################################################################
 
+echo "Installing Ruby packages ..."
+
 # rbenv *should* be installed at this point
 hash rbenv 2>/dev/null || echo "Please install rbenv before continuing"
 

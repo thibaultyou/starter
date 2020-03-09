@@ -4,6 +4,8 @@
 # General
 ###############################################################################
 
+echo "Updating general settings ..."
+
 # Show ~/Library
 chflags nohidden ~/Library
 

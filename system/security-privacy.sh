@@ -4,6 +4,8 @@
 # Security & Privacy
 ###############################################################################
 
+echo "Updating security and privacy settings ..."
+
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -bool true
 defaults write com.apple.screensaver askForPasswordDelay -int 0

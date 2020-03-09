@@ -4,12 +4,7 @@
 # App Store apps
 ###############################################################################
 
-echo "Please type your Apple credentials to continue ..."
-echo "Apple login :"
-read ACCOUNT
-echo "Apple password for $ACCOUNT"
-read -s PASSWORD
-mas signin $ACCOUNT "$PASSWORD"
+echo "Installing App Store apps ..."
 
 # Mas install function
 install () {

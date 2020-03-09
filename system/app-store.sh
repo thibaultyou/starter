@@ -4,6 +4,8 @@
 # App Store
 ###############################################################################
 
+echo "Updating App Store settings ..."
+
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 

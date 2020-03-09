@@ -4,6 +4,8 @@
 # Desktop & Screen Saver
 ###############################################################################
 
+echo "Updating screen saver settings ..."
+
 # Start after begin idle for time (in seconds)
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 

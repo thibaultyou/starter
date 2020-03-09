@@ -4,6 +4,8 @@
 # Sound
 ###############################################################################
 
+echo "Updating sound settings ..."
+
 # System alert sound
 # Defaults sounds located in `/System/Library/Sounds/`; test with `afplay`
 # Basso         Blow          Bottle        Frog

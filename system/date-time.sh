@@ -4,6 +4,8 @@
 # Date & Time
 ###############################################################################
 
+echo "Updating date and time settings ..."
+
 # Set the timezone; see `systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Paris" > /dev/null
 

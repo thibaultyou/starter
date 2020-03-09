@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Mission Control
+# Dashboard
 ###############################################################################
+
+echo "Updating Dashboard settings ..."
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true

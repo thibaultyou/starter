@@ -4,6 +4,8 @@
 # Mission Control
 ###############################################################################
 
+echo "Updating Mission Control settings ..."
+
 # Mission Control animation duration
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
@@ -27,7 +29,6 @@ defaults write com.apple.dock springboard-rows -int 4
 
 # Reset Launchpad
 defaults write com.apple.dock ResetLaunchPad -bool true
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Hot corners
 #  0 : NOP

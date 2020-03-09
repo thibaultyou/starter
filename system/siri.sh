@@ -4,6 +4,8 @@
 # Siri
 ###############################################################################
 
+echo "Updating Siri settings ..."
+
 # Enable Siri
 defaults write com.apple.assistant.support "Assistant Enabled" -bool true
 

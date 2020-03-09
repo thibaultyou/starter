@@ -4,6 +4,8 @@
 # Printers & Scanners
 ###############################################################################
 
+echo "Updating printers and scanners settings ..."
+
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true

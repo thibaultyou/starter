@@ -4,6 +4,8 @@
 # Displays
 ###############################################################################
 
+echo "Updating displays settings ..."
+
 # Automatically adjust brightness
 defaults write com.apple.BezelServices dAuto -bool true
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool true

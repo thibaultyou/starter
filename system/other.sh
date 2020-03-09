@@ -4,10 +4,11 @@
 # Other
 ###############################################################################
 
+echo "Updating other settings ..."
+
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
 defaults -currentHost write dontAutoLoad -array \
-    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-    "/System/Library/CoreServices/Menu Extras/User.menu"
+    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/VPN.menu" \
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
@@ -90,33 +91,17 @@ for app in "${hidden_apps[@]}"; do
              "/Applications/Utilities/${app}.app"
 done
 
-# Link hidden prefPanes
-sudo ln -s '/System/Library/CoreServices/Applications/Archive Utility.app/Contents/Resources/Archives.prefPane' \
-           '/Library/PreferencePanes/Archives.prefPane'
-
 # Link hidden command line tools
 sudo ln -s '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport' \
            '/usr/local/bin/airport'
 sudo ln -s '/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc' \
            '/usr/local/bin/jsc'
 
-# Link hidden fonts
-sudo ln -s /System/Library/PrivateFrameworks/CoreRecognition.framework/Resources/Fonts/ \
-  /Library/Fonts/CoreRecognition
-
 # Enable Folder Actions
 defaults write com.apple.FolderActionsDispatcher folderActionsEnabled -bool false
 
 # Enable locate command and build locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-
-###############################################################################
-# Default Applications
-###############################################################################
-
-if [ -x "/usr/local/bin/duti" && "${HOME}/.duti"]; then
-  /usr/local/bin/duti "${HOME}/.duti"
-fi
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user

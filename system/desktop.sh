@@ -4,6 +4,8 @@
 # Desktop
 ###############################################################################
 
+echo "Updating desktop settings ..."
+
 # Show internal hard drives on desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 

@@ -4,6 +4,8 @@
 # Finder
 ###############################################################################
 
+echo "Updating Finder settings ..."
+
 # Show user `Library` folder
 chflags nohidden "${HOME}/Library"
 
@@ -74,55 +76,14 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool false
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool false
 defaults write com.apple.finder OpenWindowForNewRemovableDisk    -bool false
 
-# Set icon view settings on desktop and in icon views
-for view in 'Desktop' 'FK_Standard' 'Standard'; do
-
-    # Item info near icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:showItemInfo bool true" ~/Library/Preferences/com.apple.finder.plist
-
-    # Item info to right of icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:labelOnBottom bool false" ~/Library/Preferences/com.apple.finder.plist
-
-    # Snap-to-grid for icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:arrangeBy string grid" ~/Library/Preferences/com.apple.finder.plist
-
-    # Grid spacing for icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:gridSpacing integer 100" ~/Library/Preferences/com.apple.finder.plist
-
-    # Icon size
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:iconSize integer 32" ~/Library/Preferences/com.apple.finder.plist
-
-done
-
 # Preferred view style
 # Icon View   : `icnv`
 # List View   : `Nlsv`
 # Column View : `clmv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-sudo find / -name ".DS_Store" --delete
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
-
-# View Options
-# ColumnShowIcons    : Show preview column
-# ShowPreview        : Show icons
-# ShowIconThumbnails : Show icon preview
-# ArrangeBy          : Sort by
-#   dnam : Name
-#   kipl : Kind
-#   ludt : Date Last Opened
-#   pAdd : Date Added
-#   modd : Date Modified
-#   ascd : Date Created
-#   logs : Size
-#   labl : Tags
-/usr/libexec/PlistBuddy \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ColumnShowIcons bool    false" \
-    -c "Set :StandardViewOptions:ColumnViewOptions:FontSize        integer 11"    \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ShowPreview     bool    true"  \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy       string  dnam"  \
-    ~/Library/Preferences/com.apple.finder.plist
 
 # New window target
 # Computer     : `PfCm`
