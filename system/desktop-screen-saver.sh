@@ -4,14 +4,12 @@
 # Desktop & Screen Saver
 ###############################################################################
 
-# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
-# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-#sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
-
 # Start after begin idle for time (in seconds)
-defaults -currentHost write com.apple.screensaver idleTime -int 1800
+defaults -currentHost write com.apple.screensaver idleTime -int 300
 
 # Show with clock
-defaults -currentHost write com.apple.screensaver showClock -bool false
+defaults -currentHost write com.apple.screensaver showClock -bool true
+
+# Change default screensaver password delay options
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0

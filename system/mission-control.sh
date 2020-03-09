@@ -20,17 +20,14 @@ defaults write com.apple.dock expose-group-by-app -bool false
 # Displays have seperate Spaces
 defaults write com.apple.spaces spans-displays -bool false
 
-# Disable the Launchpad gesture (pinch with thumb and three fingers)
-#defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+# set custom number of columns
+defaults write com.apple.dock springboard-columns -int 6
+# set custom number of rows
+defaults write com.apple.dock springboard-rows -int 3
 
 # Reset Launchpad
+defaults write com.apple.dock ResetLaunchPad -bool true
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
-
-# Add iOS Simulator to Launchpad
-if [ -e "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" ]; then
-    sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" \
-                "/Applications/Simulator.app"
-fi
 
 # Hot corners
 #  0 : NOP
@@ -53,5 +50,5 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner   -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner
-defaults write com.apple.dock wvous-br-corner   -int 0
+defaults write com.apple.dock wvous-br-corner   -int 5
 defaults write com.apple.dock wvous-br-modifier -int 0

@@ -35,9 +35,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Use F1, F2, etc. keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool false
 
-# Stop iTunes from responding to the keyboard media keys
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
 # Use smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
@@ -51,36 +48,14 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # Disable automatic capitalization as it’s annoying when typing code
-#defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 # Correct spelling automatically
-# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Continuously check spelling in (most) text views
-# defaults write NSGlobalDomain NSAllowContinuousSpellChecking -bool false
-
-# Disable blinking cursor
-# defaults write -g NSTextInsertionPointBlinkPeriodOn  -float 1000000
-# defaults write -g NSTextInsertionPointBlinkPeriodOff -float 1000
-
-# Prevent accidental Power button presses from sleeping system
-defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool false
-
-# Keyboard Shortcuts (these are case insensitive)
-# Modifier key legend:
-#   ^    ⌃  Control
-#   ~    ⌥  Option
-#   $    ⇧  Shift
-#   @    ⌘  Command
-#   \033    Nested Option Delimiter
-#   nil     No shortcut
-# Note: Some of the characters above (e.g. "$" and "~") are special characters
-# and may need to be escaped in Bash commands
-# http://support.apple.com/kb/HT1343
-# Note: When adding shortcuts for nested options, entries must begin with
-# the '\033' escape sequence, in addition to seperating the options.
-# (e.g. '\033Edit\033Find\033Find Next")
-
+# Adjust blinking cursor speed
+defaults write -g NSTextInsertionPointBlinkPeriodOn -float 300
+defaults write -g NSTextInsertionPointBlinkPeriodOff -float 200
 
 # Dictation
 ###############################################################################
@@ -93,7 +68,7 @@ defaults write com.apple.speech.recognition.AppleSpeechRecognition.prefs \ Dicta
 
 # Use Enhanced Dictation
 # Allows offline use and continuous dictation with live feedback
-if [ -d '/System/Library/Speech/Recognizers/SpeechRecognitionCoreLanguages/en_US.SpeechRecognition' ]; then
+if [ -d '/System/Library/Speech/Recognizers/SpeechRecognitionCoreLanguages/fr_FR.SpeechRecognition' ]; then
   defaults write com.apple.speech.recognition.AppleSpeechRecognition.prefs \
      DictationIMPresentedOfflineUpgradeSuggestion -bool true
   defaults write com.apple.speech.recognition.AppleSpeechRecognition.prefs \

@@ -18,7 +18,7 @@ if [[ "$IS_LAPTOP" != "" ]]; then
     sudo pmset -b         \
         sleep         15  \
         disksleep     10  \
-        displaysleep   5  \
+        displaysleep   10  \
         halfdim        1
 
     # Notebook: Power Adapter
