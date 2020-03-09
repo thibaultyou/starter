@@ -1,9 +1,10 @@
-
 #!/usr/bin/env bash
 
 ###############################################################################
 # Services Menu Agent
 ###############################################################################
+
+echo "Updating Service Menu Agent settings ..."
 
 # Need to use PlistBuddy here
 defaults write pbs NSServicesStatus -dict-add '"com.apple.Terminal - New Terminal at Folder - newTerminalAtFolder"' '{

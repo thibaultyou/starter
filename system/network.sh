@@ -4,6 +4,8 @@
 # Network
 ###############################################################################
 
+echo "Updating network settings ..."
+
 connected_interface=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
 connected_service=$(networksetup -listallhardwareports |
   grep -B1 "Device: ${connected_interface}" | awk -F': ' '{print $2; exit}')

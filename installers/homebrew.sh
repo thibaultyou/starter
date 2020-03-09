@@ -4,6 +4,8 @@
 # Homebrew
 ###############################################################################
 
+echo "Installing Homebrew / Cask packages ..."
+
 # Install Homebrew if not installed - brew.sh
 if ! hash brew 2>/dev/null; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";

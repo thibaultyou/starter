@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
+echo "Applying system settings ..."
+
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+## .gitignore
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
 
 # Set global variables
 PREF_FILES=()
@@ -45,9 +51,6 @@ function get_open_affected_apps {
   echo "Would you like to quit these apps now? [Y/n] "
 }
 
-# Open Application
-# open -a "SpeechSynthesisServer"
-
 # Quit affected applications
 function quit_apps {
   for app in "${AFFECTED_APPS[@]}"; do
@@ -58,7 +61,6 @@ function quit_apps {
         ;;
       *)
         killall "$app" &>/dev/null
-        # osascript -e "tell application \"${app}\" to quit"
         ;;
     esac
   done
@@ -74,79 +76,47 @@ function prompt_restart {
   fi
 }
 
-# System Prefrences
+# System preferences
 system_preferences=(
-  general
-  desktop-screen-saver
-  dock
-  mission-control
-  language-region
-  security-privacy
-  spotlight
-  notifications
-
-  displays
-  energy-saver
-  keyboard
-  # mouse
-  trackpad
-  printers-scanners
-  sound
-  # startup-disk
-
-  icloud
-  # internet-accounts
-  extensions
-  app-store
-  # network
-  bluetooth
-  sharing
-
-  users-groups
-  # parental-controls
-  siri
-  date-time
-  time-machine
   accessibility
-
-  other
+  app-store
   dashboard
-  cds-dvds
-  # ssd
+  date-time
+  desktop
+  desktop-screen-saver
+  displays
+  dock
+  energy-saver
+  general
+  keyboard
+  language-region
+  mission-control
+  network
+  notifications
+  other
+  pbs
+  printers-scanners
+  security-privacy
+  sharing
+  siri
+  sound
+  spotlight
+  time-machine
+  trackpad
+  users-groups
 )
 
 for pane in "${system_preferences[@]}"; do
   PREF_FILES+=("system/${pane}.sh")
 done
 
-for pane in "cfprefsd" "SystemUIServer" "Dock" "SpeechSynthesisServer"; do
+for pane in "cfprefsd" "SystemUIServer" "Finder" "Dock" "SpeechSynthesisServer"; do
   AFFECTED_APPS+=("$pane")
 done
 
-# Default Apps
-set_prefs activity-monitor "Activity Monitor"
+# Apps preferences
 set_prefs app-store "App Store"
-# set_prefs calendar "Calendar"
-set_prefs contacts "Contacts"
-set_prefs disk-utility "Disk Utility"
 set_prefs finder "Finder"
-set_prefs font-book "Font Book"
-set_prefs iwork "Keynote" "Numbers" "Pages"
-set_prefs mail "Mail"
-set_prefs messages "Messages"
-set_prefs quicktime "QuickTime Player"
-set_prefs safari "Safari" "WebKit"
-set_prefs terminal # Do not kill "Terminal" - it will stop script execution
-set_prefs textedit "TextEdit"
-
-# Third Party Apps
-set_prefs adobe
-set_prefs divvy "Divvy"
-set_prefs dropbox "Dropbox"
-set_prefs google-chrome "Google Chrome"
-set_prefs qlcolorcode "Quick Look"
-set_prefs sublime-text "Sublime Text"
-set_prefs transmission "Transmission"
 
 # Run
 get_open_affected_apps

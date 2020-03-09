@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Installing Apps ..."
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -16,8 +18,7 @@ INSTALLERS=(
   python
   node
   shells
-  google-fonts
-  safari-extensions
+  app-store
 )
 
 # Sources all the preference files

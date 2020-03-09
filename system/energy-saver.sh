@@ -4,6 +4,8 @@
 # Energy Saver
 ###############################################################################
 
+echo "Updating energy saver settings ..."
+
 # Standby delay in seconds
 # Default  : 3600
 # 24 Hours : 86400
@@ -18,13 +20,13 @@ if [[ "$IS_LAPTOP" != "" ]]; then
     sudo pmset -b         \
         sleep         15  \
         disksleep     10  \
-        displaysleep   5  \
+        displaysleep   10  \
         halfdim        1
 
     # Notebook: Power Adapter
     sudo pmset -c         \
-        sleep          0  \
-        disksleep      0  \
+        sleep         60  \
+        disksleep     30  \
         displaysleep  30  \
         halfdim        1  \
         autorestart    1  \
@@ -34,8 +36,8 @@ else
 
     # Desktop
     sudo pmset            \
-        sleep          0  \
-        disksleep      0  \
+        sleep         60  \
+        disksleep     60  \
         displaysleep  30  \
         halfdim        1
 

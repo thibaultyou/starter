@@ -4,8 +4,10 @@
 # Date & Time
 ###############################################################################
 
+echo "Updating date and time settings ..."
+
 # Set the timezone; see `systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "America/New_York" > /dev/null
+sudo systemsetup -settimezone "Europe/Paris" > /dev/null
 
 # Set date and time automatically
 sudo systemsetup -setusingnetworktime on > /dev/null
@@ -21,10 +23,10 @@ sudo defaults write /Library/Preferences/com.apple.timezone.auto.plist Active -b
 # "HH"   Use a 24-hour clock
 # "a"    Show AM/PM
 # "ss"   Display the time with seconds
-defaults write com.apple.menuextra.clock DateFormat -string "HH:mm"
+defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
 
 # Flash the time separators
-defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 
 # Analog menu bar clock
 defaults write com.apple.menuextra.clock IsAnalog -bool false

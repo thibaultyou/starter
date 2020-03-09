@@ -4,6 +4,8 @@
 # Python
 ###############################################################################
 
+echo "Installing Python packages ..."
+
 # pyenv *should* be installed at this point
 hash pyenv 2>/dev/null || echo "Please install pyenv before continuing"
 
@@ -20,10 +22,6 @@ hash pip 2>/dev/null || echo "Please install pip before continuing"
 
 pip_packages=(
   pip
-  fonttools
-  qtfaststart
-  dnsyo
-  powerline-status
 )
 
 # Loop through each package individally because

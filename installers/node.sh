@@ -4,6 +4,8 @@
 # Node
 ###############################################################################
 
+echo "Installing Node packages ..."
+
 # Node and yarn *should* be installed at this point
 hash node 2>/dev/null || echo "Please install node before continuing"
 hash npm 2>/dev/null || echo "Please install npm before continuing"
@@ -13,28 +15,7 @@ npm update -g npm
 
 # Install Node packages
 node_packages=(
-  a11y
-  autoprefixer
-  babili
-  browser-sync
-  clean-css
-  cssmin
-  grunt-cli
-  gulp
-  html-minifier
-  jscrush
-  jscs
-  jshint
-  lebab
-  lighthouse
-  modernizr
-  packer
-  psi
-  snapline
-  stylelint
-  svgo
-  uglify-js
-  '@shopify/slate'
+  typescript
 )
 
 # Loop through each package individally because
