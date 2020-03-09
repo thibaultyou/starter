@@ -16,7 +16,7 @@ echo "$all_services" | grep -v "$connected_service" | \
   xargs -I {} sudo networksetup -setnetworkserviceenabled {} off
 
 # Show Time Connected in VPN menubar item
-defaults write com.apple.networkConnect VPNShowTime -bool false
+defaults write com.apple.networkConnect VPNShowTime -bool true
 
 # Show Status When Connecting in VPN menubar item
-defaults write com.apple.networkConnect VPNShowStatus -bool false
+defaults write com.apple.networkConnect VPNShowStatus -bool true

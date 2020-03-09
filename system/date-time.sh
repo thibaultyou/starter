@@ -26,7 +26,7 @@ sudo defaults write /Library/Preferences/com.apple.timezone.auto.plist Active -b
 defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
 
 # Flash the time separators
-defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 
 # Analog menu bar clock
 defaults write com.apple.menuextra.clock IsAnalog -bool false

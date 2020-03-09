@@ -7,7 +7,6 @@ When configuring a new Mac, or when performing a clean installation of macOS, th
 - The installation of 3rd party applications.
 - The installation of command line tools.
 - Configuration of system and application preferences.
-- Creation of a local file system hierarchy
 
 Starter allows users to configure these settings prior to installation, and create reproducible macOS environments.
 
@@ -15,11 +14,15 @@ Starter allows users to configure these settings prior to installation, and crea
 
 Simply clone the repository, `cd` into the local `starter` repository and then:
 
-    source install
+    source install.sh
 
-To configure the various system and application preferences, `cd` into the local `starter` repository and then:
+To configure the various system and application preferences:
 
-    source starter
+    source starter.sh
+    
+To generate SSH and GPG keys:
+
+    source keys.sh
 
 ## Tools
 
