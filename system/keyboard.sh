@@ -7,7 +7,7 @@
 echo "Updating keyboard settings ..."
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 # Set key repeat rate (minimum 1)
 # Off: 300000
@@ -18,7 +18,7 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # Set delay until repeat (in milliseconds)
 # Long: 120
 # Short: 15
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Adjust keyboard brightness in low light
 defaults write com.apple.BezelServices kDim -bool true
@@ -37,7 +37,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Use F1, F2, etc. keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool false
 
-# Use smart quotes
+# Use smart quotes``
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Set Double and Single quotes

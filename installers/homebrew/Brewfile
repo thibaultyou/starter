@@ -59,10 +59,12 @@ cask "virtualbox"
 cask "postman"
 
 # Apps
+cask "android-file-transfer"
+cask "unetbootin"
+cask "teamviewer"
 cask "ultimaker-cura"
 cask "spectacle"
 cask "pock"
-cask "little-snitch"
 cask "istat-menus"
 cask "cheatsheet"
 cask "appcleaner"
