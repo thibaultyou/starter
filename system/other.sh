@@ -10,7 +10,6 @@ echo "Updating other settings ..."
 defaults -currentHost write dontAutoLoad -array \
     "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/VPN.menu" \
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
     "/System/Library/CoreServices/Menu Extras/Displays.menu" \
@@ -58,7 +57,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Screenshot location
-defaults write com.apple.screencapture location -string "$HOME/Pictures"
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"

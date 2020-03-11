@@ -19,11 +19,7 @@ sudo systemsetup -setnetworktimeserver "time.apple.com" > /dev/null
 sudo defaults write /Library/Preferences/com.apple.timezone.auto.plist Active -bool true
 
 # Menu bar clock format
-# "h:mm" Default
-# "HH"   Use a 24-hour clock
-# "a"    Show AM/PM
-# "ss"   Display the time with seconds
-defaults write com.apple.menuextra.clock DateFormat -string "HH:mm:ss"
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM 'at' HH:mm:ss"
 
 # Flash the time separators
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool false

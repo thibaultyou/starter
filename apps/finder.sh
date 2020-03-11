@@ -25,7 +25,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop     -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop     -bool false
 
 # Visibility of hidden files
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

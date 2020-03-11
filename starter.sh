@@ -117,6 +117,8 @@ done
 # Apps preferences
 set_prefs app-store "App Store"
 set_prefs finder "Finder"
+set_prefs transmission "Transmission"
+set_prefs irvue "Irvue"
 
 # Run
 get_open_affected_apps
