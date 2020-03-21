@@ -28,7 +28,7 @@ defaults write com.apple.dock largesize -int 72
 defaults write com.apple.dock mineffect -string 'scale'
 
 # Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
-defaults write NSGlobalDomain AppleWindowTabbingMode -string 'always'
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
 
 # Lock the Dock position
 defaults write com.apple.dock position-immutable -bool true
