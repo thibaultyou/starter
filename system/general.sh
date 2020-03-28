@@ -26,6 +26,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Automatically hide and show the menu bar
 defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
 
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
 # Sidebar icon size
 # Small  : 1
 # Medium : 2
