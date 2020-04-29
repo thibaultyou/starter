@@ -63,7 +63,7 @@ defaults write com.apple.finder FXPreferredGroupBy -string "Name"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Delay for spring loaded directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.1
 
 # Writing of .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
