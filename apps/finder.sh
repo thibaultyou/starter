@@ -105,7 +105,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool false
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Desktop Enabled
-defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder CreateDesktop -bool true
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”

@@ -19,7 +19,7 @@ Simply clone the repository, `cd` into the local `starter` repository and then:
 To configure the various system and application preferences:
 
     source starter.sh
-    
+
 To generate SSH and GPG keys:
 
     source keys.sh
