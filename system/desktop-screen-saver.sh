@@ -10,7 +10,7 @@ echo "Updating screen saver settings ..."
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
 # Set Flurry as screensaver
-defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver/ type 0
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver type 0
 
 # Show with clock
 defaults -currentHost write com.apple.screensaver showClock -bool true
