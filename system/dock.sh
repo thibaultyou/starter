@@ -27,6 +27,9 @@ defaults write com.apple.dock largesize -int 72
 # Minimization effect: 'genie', 'scale', 'suck'
 defaults write com.apple.dock mineffect -string 'scale'
 
+# Disable recent items in Dock
+defaults write com.apple.dock show-recents -bool false
+
 # Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
 defaults write NSGlobalDomain AppleWindowTabbingMode -string 'always'
 
