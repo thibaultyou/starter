@@ -30,9 +30,6 @@ defaults write com.apple.dock mineffect -string 'scale'
 # Disable recent items in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
-defaults write NSGlobalDomain AppleWindowTabbingMode -string 'always'
-
 # Lock the Dock position
 defaults write com.apple.dock position-immutable -bool true
 

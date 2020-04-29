@@ -18,6 +18,9 @@ chflags -h hidden "${HOME}/bin"
 # Window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
+# Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
+
 # Icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop         -bool false
