@@ -4,6 +4,8 @@
 # Transmission
 ###############################################################################
 
+echo "Updating Transmission settings ..."
+
 ## General
 
 # Automatically size window to fit all transfers
@@ -46,7 +48,7 @@ defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
 # Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool false
 
 # Display window when opening a torrent file
 defaults write org.m0k.transmission DownloadAskMulti -bool true

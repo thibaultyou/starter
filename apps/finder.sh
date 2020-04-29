@@ -18,6 +18,9 @@ chflags -h hidden "${HOME}/bin"
 # Window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
+# Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
+
 # Icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop         -bool false
@@ -60,7 +63,7 @@ defaults write com.apple.finder FXPreferredGroupBy -string "Name"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Delay for spring loaded directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.1
 
 # Writing of .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -105,7 +108,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool false
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Desktop Enabled
-defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder CreateDesktop -bool true
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”

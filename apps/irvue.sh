@@ -4,6 +4,8 @@
 # Irvue
 ###############################################################################
 
+echo "Updating Irvue settings ..."
+
 # Init Irvue
 defaults write com.leonspok.osx.Irvue Initialized -bool true
 

@@ -9,7 +9,7 @@ ssh-keygen -t rsa -b 4096
 # cat ~/.ssh/id_rsa.pub
 
 # Generate GPG key
-gpg --default-new-key-algo rsa4096 --gen-key
+gpg --full-gen-key
 
 # Print the GPG keys
 # gpg --list-secret-keys --keyid-format LONG

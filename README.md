@@ -12,6 +12,10 @@ Starter allows users to configure these settings prior to installation, and crea
 
 ## Installation
 
+Log into the App Store with Apple account:
+
+    open -a /System/Applications/App\ Store.app
+
 Simply clone the repository, `cd` into the local `starter` repository and then:
 
     source install.sh
@@ -19,7 +23,7 @@ Simply clone the repository, `cd` into the local `starter` repository and then:
 To configure the various system and application preferences:
 
     source starter.sh
-    
+
 To generate SSH and GPG keys:
 
     source keys.sh
