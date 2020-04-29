@@ -4,6 +4,8 @@
 # Transmission
 ###############################################################################
 
+echo "Updating Transmission settings ..."
+
 ## General
 
 # Automatically size window to fit all transfers
