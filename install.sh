@@ -17,8 +17,8 @@ INSTALLERS=(
   ruby
   python
   node
-  shells
   app-store
+  shells
 )
 
 # Sources all the preference files
