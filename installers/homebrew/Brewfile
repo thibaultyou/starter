@@ -18,7 +18,7 @@ brew "fish"
 
 # CLI utilities
 brew "coreutils"
-brew "curl", args: ["with-nghttp2"]
+brew "curl"
 brew "findutils"
 brew "git"
 brew "gpg"
@@ -28,6 +28,7 @@ brew "rsync"
 brew "ssh-copy-id"
 brew "tree"
 brew "wget"
+cask "osxfuse"
 brew "ntfs-3g"
 
 # Mac OS tools
